@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Links, Buttons, Navigation</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -12,17 +12,20 @@
       <h1 class="headline center">Navigation Station</h1>
       <!-- nav is one of our "semantic" HTML elements. It tells computers, "Here's where to find the site navigation" -->
       <nav class="nav">
-        <!-- Normally I wrap my nav elements in an unordered list, but to keep this example simple, I'm not doing that -->
+        <!-- Normally I wrap my nav elements in an unordered list, but to keep this example simple, I'm not doing that. -->
         <a href="#get-down-here">
-          <button class="default-button">Internal link: same page</button>
+          <!-- Whatever I set the title attribute to becomes a tooltip when the user hovers on the button-->
+          <button title="Plain old button">Internal link: same page</button>
         </a>
         <a href="about.html">
-          <button class="bigger-button">
+          <button class="bigger-button" title="Enlarged button">
             Internal link: different page, same site
           </button>
         </a>
         <a href="https://www.wikipedia.org">
-          <button>External link: other website</button>
+          <button class="fancy-button" title="Highly stylized button">
+            External link: other website
+          </button>
         </a>
       </nav>
     </header>
@@ -41,17 +44,19 @@
           >I'm a link to a different page on the same website.</a
         >
         Note how there is NO https:// on my href. However, there needs to be an
-        HTML file in your project that matches my href. For this example, I'd
-        add a file called <strong>about.html</strong> to the same folder on my
-        computer as my index.html. I could use a different folder, but the
-        relative path must be correct.
+        HTML file in your project that matches my href. For this example, I've
+        added a file called <strong>about.html</strong> to the
+        <strong>same folder</strong> on my computer as my index.html. I could
+        use a different folder, as long as the relative path to it is correct.
       </p>
 
       <p>
-        <a href="#box">I'm a link to a different part of the same page.</a>
+        <a href="#get-down-here"
+          >I'm a link to a different part of the same page.</a
+        >
         My href needs to match the <strong>ID</strong> of a different element on
-        the page. Remember that no two elements on your site should have the
-        same ID.
+        the page. Remember that no two elements on the page should have the same
+        ID.
       </p>
     </main>
 
